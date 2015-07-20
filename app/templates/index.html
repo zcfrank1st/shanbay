@@ -1,0 +1,115 @@
+<html ng-app="myapp">
+<head>
+    {% load staticfiles %}
+    <link href="{% static 'libs/css/bootstrap.min.css' %}" rel="stylesheet"/>
+    <link rel="stylesheet" href="{% static 'libs/css/font-awesome.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'libs/css/ace.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'libs/css/ace-rtl.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'libs/css/ace-skins.min.css' %}"/>
+
+    <link rel="stylesheet" href="{% static 'libs/bower_components/ngDialog/css/ngDialog.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'libs/bower_components/ngDialog/css/ngDialog-theme-default.min.css' %}"/>
+</head>
+
+<div class="navbar navbar-default" id="navbar" style="height: 45px;background: green">
+    <div class="navbar-container" id="navbar-container">
+        <div class="navbar-header pull-left">
+            <a href="#" class="navbar-brand">
+                <small>
+                    扇贝
+                </small>
+            </a><!-- /.brand -->
+        </div>
+        <!-- /.navbar-header -->
+
+        <div class="navbar-header pull-right" role="navigation">
+            <ul class="nav ace-nav">
+                <li class="green">
+                    <img class="nav-user-photo" src="{% static 'libs/images/1.png' %}"/>
+                        <span class="user-info" style="color: whitesmoke">
+                            <small>欢迎!</small>
+                                    chao.zhang
+                        </span>
+                </li>
+            </ul>
+            <!-- /.ace-nav -->
+        </div>
+        <!-- /.navbar-header -->
+    </div>
+    <!-- /.container -->
+</div>
+
+
+<div class="main-container" id="main-container">
+    <div class="main-container-inner">
+        <a class="menu-toggler" id="menu-toggler" href="#">
+            <span class="menu-text"></span>
+        </a>
+
+        <div class="sidebar" id="sidebar" ng-controller="sidebarController">
+            <ul class="nav nav-list">
+                <li ng-class="{true: 'active'}[activeA]">
+                    <a href="#/" ng-click="activeA=true;activeB=false;">
+                        <i class="icon-gear" style="color: green"></i>
+                        <span class="" style="color: green"> 设置 </span>
+                    </a>
+                </li>
+
+                <li ng-class="{true: 'active'}[activeB]">
+                    <a href="#/learn" ng-click="activeA=false;activeB=true;">
+                        <i class="icon-book" style="color: green"></i>
+                        <span class="" style="color: green"> 开始学习 </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <ui-view></ui-view>
+    </div>
+</div>
+
+<script type="text/ng-template" id="template1">
+    <h4>今日学习计划已完成！</h4>
+    <button ng-click="markLearnWords()" class="btn btn-danger btn-sm">关闭</button>
+</script>
+
+<script type="text/ng-template" id="template2">
+    <h4>已经是今日学习的第一个单词啦！</h4>
+    <button ng-click="closeThisDialog()" class="btn btn-danger btn-sm">关闭</button>
+</script>
+
+<script type="text/ng-template" id="template0">
+    <h4>学习计划保存{[{ message }]}！</h4>
+    <button ng-click="closeThisDialog()" class="btn btn-info btn-sm">关闭</button>
+</script>
+
+<script type="text/ng-template" id="template3">
+    <h4>笔记保存{[{ message }]}！</h4>
+    <button ng-click="closeThisDialog()" class="btn btn-success btn-sm">关闭</button>
+</script>
+
+<script type="text/ng-template" id="template4">
+    <h4>笔记保存{[{ message }]}！</h4>
+    <button ng-click="closeThisDialog()" class="btn btn-danger btn-sm">关闭</button>
+</script>
+
+<script src="{% static 'libs/bower_components/jquery/dist/jquery.min.js' %}"></script>
+<script src="{% static 'libs/js/bootstrap.min.js' %}"></script>
+
+<script src="{% static 'libs/js/jquery.hotkeys.min.js' %}"></script>
+<script src="{% static 'libs/js/bootstrap-wysiwyg.min.js' %}"></script>
+<script src="{% static 'libs/js/ace-elements.min.js' %}"></script>
+<script src="{% static 'libs/js/ace.min.js' %}"></script>
+<script src="{% static 'libs/js/ace-extra.min.js' %}"></script>
+
+<script src="{% static 'libs/bower_components/angular/angular.min.js' %}"></script>
+<script src="{% static 'libs/bower_components/angular-resource/angular-resource.min.js' %}"></script>
+<script src="{% static 'libs/bower_components/ui-router/release/angular-ui-router.min.js' %}"></script>
+
+<script src="{% static 'libs/bower_components/ngDialog/js/ngDialog.min.js' %}"></script>
+
+
+<script src="{% static 'js/app.js' %}"></script>
+<script src="{% static 'js/restful.js' %}"></script>
+<script src="{% static 'js/controller.js' %}"></script>
+</html>

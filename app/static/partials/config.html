@@ -1,0 +1,109 @@
+<div class="main-content">
+    <div class="page-content">
+        <div class="page-header">
+            <h1>
+                <span style="color: green;">学习计划设置</span>
+            </h1>
+        </div>
+        <!-- /.page-header -->
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="row">
+                    <div class= "col-xs-12">
+
+                        <div class="col-sm-3">
+                            <div class="widget-box">
+                                <div class="widget-header widget-header-flat">
+                                    <h4><i class="icon-gear"></i>当前设置</h4>
+                                </div>
+
+                                <div class="widget-body">
+                                    <div class="widget-main">
+                                        <div class="row">
+                                            <div class="col-sm-3 infobox-container">
+                                                <div class="infobox infobox-green  ">
+                                                    <div class="infobox-icon">
+                                                        <i class="icon-book"></i>
+                                                    </div>
+
+                                                    <div class="infobox-data">
+                                                        <span class="infobox-data-number">{[{type}]}</span>
+
+                                                        <div class="infobox-content">学习类型</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="infobox infobox-blue  ">
+                                                    <div class="infobox-icon">
+                                                        <i class="icon-lightbulb"></i>
+                                                    </div>
+
+                                                    <div class="infobox-data">
+                                                        <span class="infobox-data-number">{[{count}]}</span>
+
+                                                        <div class="infobox-content">每日学习数量</div>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-9">
+                            <div class="widget-box">
+                                <div class="widget-header widget-header-flat">
+                                    <h4><i class="icon-gears"></i>学习设置</h4>
+                                </div>
+
+                                <div class="widget-body">
+                                    <div class="widget-main">
+                                        <div class="row">
+                                            <div class="col-sm-9">
+
+                                                <form class="form-horizontal" role="form">
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label"
+                                                               for="form-field-1"> 学习类型： </label>
+
+                                                        <div class="col-sm-9">
+                                                            <select ng-model="type">
+                                                                <option value="CET4">CET4</option>
+                                                                <option value="CET6">CET6</option>
+                                                                <option value="IELTS">IELTS</option>
+                                                                <option value="TOEFL">TOEFL</option>
+                                                                <option value="GRE">GRE</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="col-sm-3 control-label"
+                                                               for="form-field-1"> 每日学习数量： </label>
+
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="col-xs-10 col-sm-5" placeholder="请填写数字" ng-model="count"/>
+                                                        </div>
+                                                    </div>
+                                                </form>
+
+                                                <button class="btn btn-info btn-sm" style="float: right" ng-click="saveConfig()">
+                                                    <i class="icon-pencil align-top bigger-125"></i>
+                                                    保存设置
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

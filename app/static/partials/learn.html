@@ -1,0 +1,156 @@
+<div class="main-content">
+    <div class="page-content">
+        <div class="page-header">
+            <h1>
+                <span style="color: green;">单词记忆</span>
+            </h1>
+        </div>
+        <!-- /.page-header -->
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="row">
+                    <div class="col-xs-12">
+
+                        <h1>{[{ word }]}</h1>
+
+                        <p class="lead">
+                            {[{ chinese }]}
+                        </p>
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="widget-box">
+                                    <div class="widget-header widget-header-flat">
+                                        <h4><i class=" icon-info-sign"></i>英文解释</h4>
+                                    </div>
+
+                                    <div class="widget-body">
+                                        <div class="widget-main">
+                                            <div class="row">
+
+                                                <div class="col-xs-12">
+                                                    <blockquote class="pull-left">
+                                                        <p>{[{ english }]}</p>
+                                                    </blockquote>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="widget-box">
+                                    <div class="widget-header widget-header-flat">
+                                        <h4><i class="icon-bullhorn"></i>例句</h4>
+                                    </div>
+
+                                    <div class="widget-body">
+                                        <div class="widget-main">
+                                            <div class="row">
+
+                                                <div class="col-xs-12">
+                                                    <blockquote class="pull-left">
+                                                        <p>{[{ example }]}</p>
+                                                    </blockquote>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="widget-box">
+                                    <div class="widget-header widget-header-flat">
+                                        <h4><i class="icon-edit"></i>笔记</h4>
+                                    </div>
+
+                                    <div class="widget-body">
+                                        <div class="widget-main">
+                                            <div class="row">
+
+                                                <div class="col-xs-12">
+                                                    <button class="btn btn-minier btn-info" ng-click="pen=!pen;button=!button"><i class="icon-pencil"></i>写笔记</button>
+                                                    <div ng-show="pen">
+                                                        <h4 class="header green clearfix">
+                                                            写笔记
+                                                        </h4>
+                                                        <div class="wysiwyg-editor" id="editor1"></div>
+                                                        <div class="hr hr-double dotted"></div>
+                                                    </div>
+
+                                                    <div class="pull-right" ng-show="button">
+                                                        <button class="btn btn-minier btn-success"
+                                                                ng-click="simpleSave()">保存
+                                                        </button>
+                                                        <button class="btn btn-minier btn-danger"
+                                                                ng-click="saveWithShare()">保存并分享
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-xs-12">
+                                                    <button class="btn btn-minier btn-info" ng-click="showSharedNotes()"><i class="icon-eye-open"></i>看笔记</button>
+                                                    <div ng-show="eye">
+                                                        <h4 class="header green clearfix">
+                                                            共享笔记
+                                                        </h4>
+
+                                                        <div class="widget-box" ng-repeat="one in sharedComments">
+                                                            <div class="widget-header widget-header-flat">
+                                                            </div>
+
+                                                            <div class="widget-body">
+                                                                <div class="widget-main">
+                                                                    <div class="row">
+
+                                                                        <div class="col-xs-12">
+                                                                            <blockquote class="pull-left">
+                                                                                <p ng-bind-html="one.comments"></p>
+                                                                            </blockquote>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <ul class="pager">
+                                    <li class="previous">
+                                        <a href="" ng-click="pre()">&larr; 前一个</a>
+                                    </li>
+
+                                    <li class="next">
+                                        <a href="" ng-click="next()">下一个 &rarr;</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
